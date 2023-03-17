@@ -3,18 +3,22 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 
 
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss'],
+  styleUrls: ['./register.component.css'],
+
+
 
 })
 export class RegisterComponent implements OnInit {
 
-  reactiveForm: FormGroup;
+  reactiveForm! : FormGroup;
 
   constructor(
     private fb: FormBuilder
+
   ) { }
   ngOnInit() {
     this.reactiveForm = this.fb.group({
