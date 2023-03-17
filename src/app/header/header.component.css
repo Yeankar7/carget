@@ -1,0 +1,53 @@
+.bg {background-color: rgba(214, 208, 208, 0.26);
+    margin-bottom: 27px;
+    font-weight: 500;
+}
+
+.list-space li:not(:last-child) {
+    margin-right: 30px;
+
+}
+
+li a {
+    color: #055E83;
+    font-weight: 600;
+}
+
+a:hover {
+    font-size: large;
+}
+a:visited{
+    color:blue;
+}
+
+.elementor-botton {
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    font-weight: 300px;
+    color: #055E83;
+    float: left;
+    font-weight: 600;
+    margin-right: 40px;
+    border-color:transparent;
+   
+}
+
+
+.what {
+    font-size: 28px;
+    box-sizing: border-box;
+    color: #055E83;
+    font-family: "CircularStd Book", Circular std, Sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+}
+.nin {
+    background-image: linear-gradient(to left, violet, indigo, green, black, yellow, orange, red, blue);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    font-size: small;
+  }
+  

@@ -1,0 +1,68 @@
+ .nin {
+    background-image: linear-gradient(to left, violet, indigo, blue,red ,rgb(99, 189, 15), orange, yellow);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .btn-search {
+        background: #424242;
+        border-radius: 0;
+        color: #fff;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #1c1c1c;
+      }
+      .btn-search:link, .btn-search:visited {
+        color: #fff;
+      }
+      .btn-search:active, .btn-search:hover {
+        background: #1c1c1c;
+        color: #fff;
+      }
+      .bg {background-color: rgba(214, 208, 208, 0.26);
+        margin-bottom: 27px;
+        font-weight: 500;
+    }
+    
+    .list-space li:not(:last-child) {
+        margin-right: 30px;
+    
+    }
+    
+    li a {
+        color: #055E83;
+        font-weight: 400;
+    }
+    
+    a:hover {
+        font-size: larger;
+    }
+    a:visited{
+        color:blue;
+    }
+    
+    .elementor-botton {
+        font-family: Inter, sans-serif;
+        font-size: 15px;
+        font-weight: 100px;
+        line-height: 15px;
+        color: #055E83;
+        border-radius: 40px 40px 40px 40px;
+        padding: 15px 24px 15px 24px;
+        float: left;
+        font-weight: 600;
+    }
+    .position   {
+        position: fixed;
+        top:0;
+        left:0;
+        width: 100%;
+        background-color: #fff;
+        z-index:100;
+        
+       
+
+    }
+      

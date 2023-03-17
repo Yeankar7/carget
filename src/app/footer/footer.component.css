@@ -1,0 +1,25 @@
+.footer{
+        color: #24272c;
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 0;
+        padding: 7px 0 9px;
+        
+
+}
+.foot{
+    margin-top: 50px;
+    border-top:1px solid rgb(237, 233, 237);
+    margin-left: 15px;
+    opacity: 1;
+    transition: 0.5;
+    
+}
+.foot h4{
+    margin-left: 30px;
+    margin-bottom: 20px;
+
+}
+.foot ul li{list-style: none;
+
+}
