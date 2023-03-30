@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,4 +8,18 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
-}
+  email!: string;
+  password!: string;
+  errorMessage!:string;
+
+  constructor(private router: Router){}
+
+  login(){
+    if(this.email==='admin' && this.password==='password'){
+      this.router.navigate(['/register']);
+    }else{
+      this.errorMessage='invalid details';
+    }
+  }
+
+  }

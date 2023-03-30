@@ -13,6 +13,7 @@
     margin-left: 15px;
     opacity: 1;
     transition: 0.5;
+    border-bottom:1px solid rgb(237, 233, 237);
     
 }
 .foot h4{
@@ -22,4 +23,10 @@
 }
 .foot ul li{list-style: none;
 
+}
+.foot li a{
+    list-style: none;
+    font-size: 12px;
+    text-decoration: none;
+    color:#a6a6a8;
 }
