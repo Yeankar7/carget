@@ -19,7 +19,9 @@
     "@angular/platform-browser-dynamic": "^15.0.0",
     "@angular/router": "^15.0.0",
     "aos": "^2.3.4",
+    "body-parser": "^1.20.2",
     "bootstrap": "^5.2.3",
+    "express": "^4.18.2",
     "nodejs": "^0.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
@@ -38,5 +40,18 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "typescript": "~4.8.2"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yeankar7/carget.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yeankar7/carget/issues"
+  },
+  "homepage": "https://github.com/Yeankar7/carget#readme"
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -47,6 +48,7 @@ export class RegisterComponent implements OnInit {
       { type: 'maxlength', message: 'password length.' }
     ],
   }
+  _log: any;
 
 
 
@@ -91,34 +93,42 @@ export class RegisterComponent implements OnInit {
   }
 
 
-  onSubmit() {
-    console.log(this.reactiveForm.value)
-    const resul = `
-      <p>
-      Name: ${this.reactiveForm.value.lname} ${this.reactiveForm.value.fname}
-      <br>
-      Email: ${this.reactiveForm.value.email}
-      <br>
-      phone: ${this.reactiveForm.value.phone}
-      <br>
-      </p>
-      `
-    this.notification = 'show';
-    // this._logServices.sendMail(resul)
-    this.err_msg =
-      'Your information is in proccess. <br> Please check your mail for futher response.';
-    setTimeout(() => {
-      this.notification = 'hide';
-    }, 30000);
-  }
+
 
   ngOnInit() { }
-  password(formGroup: FormGroup) {
-    const  password  = formGroup.get('password');
-    const rpassword  = formGroup.get('rpassword');
+  
+  password(reactiveForm: FormGroup) {
+    const  password  = reactiveForm.get('password');
+    const rpassword  = reactiveForm.get('rpassword');
     return password === rpassword ? null : { passwordNotMatch: true };
   }
+  // registerUser(){
+  //   this._log.registerUser(this.registerUser)
+  //   .subscribe (
+  //     res => console.log(res)
+  //     err  console.log(err)
+  //   )
+  // }
 
-
-
+  onSubmit() {
+    console.log(this.reactiveForm.value)
+    // const resul = `
+    //   <p>
+    //   Name: ${this.reactiveForm.value.lname} ${this.reactiveForm.value.fname}
+    //   <br>
+    //   Email: ${this.reactiveForm.value.email}
+    //   <br>
+    //   phone: ${this.reactiveForm.value.phone}
+    //   <br>
+    //   </p>
+    //   `
+    // this.notification = 'show';
+    // // this._logServices.sendMail(resul)
+    // this.err_msg =
+    //   'Your information is in proccess. <br> Please check your mail for futher response.';
+    // setTimeout(() => {
+    //   this.notification = 'hide';
+    // }, 30000);
+  }
 }
+ 
