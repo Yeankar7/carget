@@ -10,9 +10,9 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { LogService } from './services/log.service';
-
-
+import { FormsModule } from '@angular/forms';
+import { HirecarsComponent } from './hirecars/hirecars.component';
+import { FirstpipePipe } from './firstpipe.pipe';
 
 @NgModule({
   declarations: [
@@ -23,17 +23,18 @@ import { LogService } from './services/log.service';
     ForgetPasswordComponent,
     RegisterComponent,
     LoginComponent,
+    HirecarsComponent,
+    FirstpipePipe,
   ],
 
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
-    
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
-
+export class AppModule {}

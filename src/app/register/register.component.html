@@ -1,111 +1,292 @@
-<section class="vh-100" style="background-color: #eee;">
+<section class="vh-100" style="background-color: #eee">
   <div class="container h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-lg-12 col-xl-11">
-        <div class="card text-black" style="border-radius: 25px;">
+        <div class="card text-black" style="border-radius: 25px">
           <div class="card-body p-md-5">
             <div class="row justify-content-center">
-              <div class="row row-col-sm-2 row-cols-lg-2 row-col-md-2 row-col-xl-2">
-                <div class="col d-none d-sm-block" style="margin-top: 170px;">
-                  <img src="../../assets/logo1.jpg" width="70%" height="300px" class="img-responsive">
-                  <p style="margin-top: 30px;">You only need to register if you wish to be with us.</p>
+              <div
+                class="row row-col-sm-2 row-cols-lg-2 row-col-md-2 row-col-xl-2"
+              >
+                <div class="col d-none d-sm-block" style="margin-top: 170px">
+                  <img
+                    src="../../assets/logo1.jpg"
+                    width="70%"
+                    height="300px"
+                    class="img-responsive"
+                  />
+                  <p style="margin-top: 30px">
+                    You only need to register if you wish to be with us.
+                  </p>
                 </div>
                 <div class="col">
-
-                  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+                  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
+                    Sign up
+                  </p>
 
                   <form class="mx-1 mx-md-4">
-                    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
-
-                      <div class="d-flex flex-row align-items-center mb-4">
-                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                        <div class="form-outline flex-fill mb-0">
-                          <input type="text" id="form3Example1c" class="form-control" formControlName="fname" />
-                          <label class="form-label" for="form3Example1c">First Name</label>
-                        </div>
-                      </div>
-                      <div class="d-flex flex-row align-items-center mb-4">
-                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                        <div class="form-outline flex-fill mb-0">
-                          <input type="text" id="form3Example1c" class="form-control" formControlName="lname"  />
-                          <label class="form-label" for="form3Example1c">Last Name</label>
-                        </div>
-                      </div>
-
-
-                      <div class="d-flex flex-row align-items-center mb-4">
-                        <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                        <div class="form-outline flex-fill mb-0">
-                          <input type="email" id="form3Example3c" class="form-control" formControlName="email" />
-                          <label class="form-label" for="form3Example3c">Your Email</label>
-                        </div>
-                      </div>
-
-                      <div class="d-flex flex-row align-items-center mb-4">
-                        <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                        <div class="form-outline flex-fill mb-0">
-                          <input type="number" id="form3Example3c" class="form-control" formControlName="phone" />
-                          <label class="form-label" for="form3Example3c">Phone Number</label>
-                        </div>
+                    <form
+                      [formGroup]="reactiveForm"
+                      #form="ngForm"
+                      (ngSubmit)="onSubmit()"
+                    >
+                    <div class="form-outline flex-fill mb-0">
+                      <input
+                        type="text"
+                        name="fname"
+                        class="form-control"
+                        formControlName="fname"
+                      />
+                      <div
+                        class="text-danger"
+                        *ngIf="
+                          reactiveForm.controls['fname'].errors &&
+                          (form.submitted ||
+                            reactiveForm.controls['form'].touched)
+                        "
+                      >
+                        <span
+                          [hidden]="!reactiveForm.controls['fname'].errors"
+                          class="text-danger"
+                          >Please enter your First Name
+                        </span>
                       </div>
 
-                      <div class="d-flex flex-row align-items-center mb-4">
-                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                        <div class="form-outline flex-fill mb-0">
-                          <input type="password" id="form3Example4c" class="form-control" formControlName="password" />
-                          <label class="form-label" for="form3Example4c">Password</label>
+                      <label class="form-label" for="form3Example1c"
+                        >First Name</label
+                      >
+                    </div>
+                      <div class="form-outline flex-fill mb-0">
+                        <input
+                          type="text"
+                          name="lname"
+                          class="form-control"
+                          formControlName="lname"
+                        />
+                        <div
+                          class="text-danger"
+                          *ngIf="
+                            reactiveForm.controls['lname'].errors &&
+                            (form.submitted ||
+                              reactiveForm.controls['lname'].touched)
+                          "
+                        >
+                          <span
+                            [hidden]="!reactiveForm.controls['lname'].errors"
+                            class="text-danger"
+                            >Please enter your Last Name
+                          </span>
                         </div>
+
+                        <label class="form-label" for="form3Example1c"
+                          >Last Name</label
+                        >
                       </div>
 
-                      <div class="d-flex flex-row align-items-center mb-4">
-                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                        <div class="form-outline flex-fill mb-0">
-                          <input type="password" id="form3Example4c" class="form-control" formControlName="rpassword" />
-                          <label class="form-label" for="form3Example4c"> Repeat Password</label>
+                      <div class="form-outline flex-fill mb-0">
+                        <input
+                          type="text"
+                          name="email"
+                          class="form-control"
+                          formControlName="email"
+                        />
+                        <div
+                          class="text-danger"
+                          *ngIf="
+                            reactiveForm.controls['email'].errors &&
+                            (form.submitted ||
+                              reactiveForm.controls['email'].touched)
+                          "
+                        >
+                          <span
+                            [hidden]="!reactiveForm.controls['email'].errors"
+                            class="text-danger"
+                            >Please enter your Email
+                          </span>
+                          <span
+                            [hidden]="!reactiveForm.controls['email'].errors"
+                            class="text-danger"
+                            >Please enter your Email
+                          </span>
                         </div>
+
+                        <label class="form-label" for="form3Example1c"
+                          >Email</label
+                        >
                       </div>
 
-                      <div class="form-check d-flex justify-content-center mb-5">
-                        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
-                        <label class="form-check-label" for="form2Example3" formControlName="check">
-                          I agree all statements in <a href="#!">Terms of service</a>
+                      <div class="form-outline flex-fill mb-0">
+                        <input
+                          type="text"
+                          name="email"
+                          class="form-control"
+                          formControlName="password"
+                        />
+
+                        <div
+                          class="text-danger"
+                          *ngIf="
+                            reactiveForm.controls['password'].errors &&
+                            (form.submitted ||
+                              reactiveForm.controls['password'].touched)
+                          "
+                        >
+                          <span
+                            [hidden]="!reactiveForm.controls['password'].errors"
+                            class="text-danger"
+                            >Please enter your Password
+                          </span>
+                        </div>
+
+                        <label class="form-label" for="form3Example1c"
+                          >Enter Password</label
+                        >
+                      </div>
+
+                      <div class="form-outline flex-fill mb-0">
+                        <input
+                          type="text"
+                          name="email"
+                          class="form-control"
+                          formControlName="rpassword"
+                        />
+                        <div
+                          class="text-danger"
+                          *ngIf="
+                            reactiveForm.controls['rpassword'].errors &&
+                            (form.submitted ||
+                              reactiveForm.controls['password'].touched)
+                          "
+                        >
+                          <span
+                            [hidden]="!reactiveForm.controls['rpassword'].errors ['required']"
+                            class="text-danger"
+                            >Please repeat your Password
+                          </span>
+                          <span
+                            [hidden]="!(!reactiveForm.controls['rpassword'].errors && !reactiveForm.controls['rpassword'].errors['matchValue'])"
+                            class="text-danger"
+                            >Password do not match
+                          </span>
+                        </div>
+
+                        <label class="form-label" for="form3Example1c"
+                          >Confirm Password</label
+                        >
+                      </div>
+
+                      
+                      <div class="form-outline flex-fill mb-0">
+                        <input
+                          type="text"
+                          name="country"
+                          class="form-control"
+                          formControlName="country"
+                        />
+                        <div
+                          class="text-danger"
+                          *ngIf="
+                            reactiveForm.controls['country'].errors &&
+                            (form.submitted ||
+                              reactiveForm.controls['country'].touched)
+                          "
+                        >
+                          <span
+                            [hidden]="!reactiveForm.controls['country'].errors"
+                            class="text-danger"
+                            >Please Enter your country
+                          </span>
+                        </div>
+
+                        <label class="form-label" for="form3Example1c"
+                          >Enter Your country</label
+                        >
+                      </div>
+
+                      <div
+                        class="form-check d-flex justify-content-center mb-5"
+                      >
+                        <input
+                          class="form-check-input me-2"
+                          type="checkbox"
+                          value=""
+                          id="check"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="form2Example3"
+                          formControlName="check"
+                        >
+                          I agree all statements in
+                          <a href="#!">Terms of service</a>
                         </label>
                       </div>
-                      <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                        <button type="submit" class="btn btn-primary btn-lg" id="btn" (click)="onSubmit()">
-                          <span *ngIf="!spinner">
-                            <i class="bx bx-user"></i>
-                            Register
-                          </span>
-                          <span *ngIf="spinner" class="lds-spinner lds-spinner--center"></span>
-                        </button>
+                      <div
+                        class="d-flex justify-content-center mx-4 mb-3 mb-lg-4"
+                      >
+                        <input
+                          class="btn btn btn-primary btn-lg"
+                          type="submit" value="register"
+                        >
                       </div>
                     </form>
                   </form>
                 </div>
               </div>
               <section class="footer pt-5 mt-4">
-
                 <app-footer></app-footer>
               </section>
             </div>
+            <h4>angular pipes</h4>
+
+            Data: {{ employees }} | json
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <thead>
+                    name
+                  </thead>
+                  <thead>
+                    address
+                  </thead>
+                  <thead>
+                    contact
+                  </thead>
+                  <thead>
+                    salary
+                  </thead>
+                  <thead>
+                    joining
+                  </thead>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of employees">
+                  <td>{{ item.name }}</td>
+                  <td>{{ item.address }}</td>
+                  <td>{{ item.contact }}</td>
+                  <td>{{ item.salary }}</td>
+                  <td>{{ item.joining }}</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
+          <h4>databinding</h4>
+          company: {{company} }
+          <input type="text" value="{{ name }}" />
+
+          <h4>property binding</h4>
+          <input type="text" [value]="name" />
+          <a [href]="site">gentry</a>
+
+          <h4>event binding</h4>
+          <button (click)="greet()">click</button>
         </div>
       </div>
+
+      <h2>2 way Data binding></h2>
+      <input type="text" [(ngModel)]="name" />
     </div>
   </div>
 </section>
-
-
-<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9">
-  <div id="liveToast" class="toast {{notification}}" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="toast-header">
-      <img src="../../../assets/img/others/icons8-checked-64.png" class="rounded me-2" alt="...">
-      <strong class="me-auto">Success</strong>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-    </div>
-    <div class="toast-body" [innerHtml]='err_msg'>
-
-    </div>
-  </div>
-</div>
